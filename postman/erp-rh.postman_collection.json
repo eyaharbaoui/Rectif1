@@ -1,0 +1,1290 @@
+{
+	"info": {
+		"_postman_id": "68a09c60-08a7-4bdf-ab07-626364e06761",
+		"name": "erp-rh",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "get users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user id by username",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:34000/users/getId/youssef",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "34000",
+							"path": [
+								"users",
+								"getId",
+								"youssef"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:34000/users/get/606a08130fd33822d04fbf81",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "34000",
+							"path": [
+								"users",
+								"get",
+								"606a08130fd33822d04fbf81"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"test4updated\",\r\n    \"email\": \"test4@gmail.com\",\r\n    \"password\": \"azerty\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:34000/users/update/60520d4cede75929a4db5734",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "34000",
+							"path": [
+								"users",
+								"update",
+								"60520d4cede75929a4db5734"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buy Character",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"coins\": 10000\r\n    \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:34000/users/buyCharacter/6089f7139889a30ae0da6bcb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "34000",
+							"path": [
+								"users",
+								"buyCharacter",
+								"6089f7139889a30ae0da6bcb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user cardPack",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cardPackage\": \"605dbc15de0ded1a448e24f3\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:34000/users/update-cardPackage/6052128271f7a9169cd00ee8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "34000",
+							"path": [
+								"users",
+								"update-cardPackage",
+								"6052128271f7a9169cd00ee8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add Friend",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"friend\": \"605dc4440d4958137040cdc2\"\r\n\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:34000/users/add-friend/6052128271f7a9169cd00ee8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "34000",
+							"path": [
+								"users",
+								"add-friend",
+								"6052128271f7a9169cd00ee8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove Friend",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"friend\": \"605dc4440d4958137040cdc2\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:34000/users/remove-friend/6052128271f7a9169cd00ee8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "34000",
+							"path": [
+								"users",
+								"remove-friend",
+								"6052128271f7a9169cd00ee8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user  by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:34000/users/delete/60454fc7b9ab363b84fbb74a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "34000",
+							"path": [
+								"users",
+								"delete",
+								"60454fc7b9ab363b84fbb74a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete all users",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:34000/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "34000",
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buy coins",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"coins\": 1000\r\n    \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:34000/payment/buy/6089f7139889a30ae0da6bcb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "34000",
+							"path": [
+								"payment",
+								"buy",
+								"6089f7139889a30ae0da6bcb"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"youssef\",\r\n    \"email\": \"youssef@gmail.com\",\r\n    \"password\": \"azerty\",\r\n    \"nom\":\"youssef\",\r\n    \"prenom\":\"prenom\",\r\n    \"Sexe\": \"Homme\",\r\n    \"date-naissance\":\"16/01/1998\",\r\n    \"adresse\":\"soukra\",\r\n    \"phone\":\"20162470\",\r\n    \"salaire\": 1400,\r\n    \"rib\":\"4242424242424242\",\r\n    \"age\": 23,\r\n    \"nbJourConge\":0,\r\n    \"role\":\"collaborateur\",\r\n    \"poste\":\"technicien\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"youssef@gmail.com\",\r\n    \"password\": \"azerty\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/login/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "absence",
+			"item": [
+				{
+					"name": "AddAbsence",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"motif\":\"urgence\",\r\n    \"nb_heure\":22,\r\n    \"date\":\"2015-10-26\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/absences/add-absence",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"absences",
+								"add-absence"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllAbsences",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/absences",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"absences"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAbsenceById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/absences/60d994a5551f1e2c78c32d80",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"absences",
+								"60d994a5551f1e2c78c32d80"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAbsence",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"motif\":\"cas d'urgence\",\r\n    \"nb_heure\":22,\r\n    \"date\":\"2015-10-26\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/absences/update/60d996a506c05a05b0ac67a8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"absences",
+								"update",
+								"60d996a506c05a05b0ac67a8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAllAbsences",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/absences/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"absences",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteOneAbsence",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/absences/60d994a5551f1e2c78c32d80",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"absences",
+								"60d994a5551f1e2c78c32d80"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "conge",
+			"item": [
+				{
+					"name": "AddConge",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"motif\":\"test test test\",\r\n    \"nb_heure\":22,\r\n    \"date_d\":\"2015-10-26\",\r\n    \"date_f\":\"2015-10-26\",\r\n    \"justificatif\":\"maladie\"\r\n\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/conges/add-conge",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"conges",
+								"add-conge"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllConges",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/conges/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"conges",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCongeById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/conges/60d9a93ed929bf07740df43a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"conges",
+								"60d9a93ed929bf07740df43a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateConge",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"motif\":\"urgence testttttttttttttttt\",\r\n    \"nb_heure\":25,\r\n    \"date_d\":\"2015-10-26\",\r\n    \"date_f\":\"2015-10-26\",\r\n    \"justificatif\":\"maladie\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/conges/update/60d9a93ed929bf07740df43a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"conges",
+								"update",
+								"60d9a93ed929bf07740df43a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAllConges",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/conges/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"conges",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteOneConge",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/conges/60d9c9285fbc5b34541783af",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"conges",
+								"60d9c9285fbc5b34541783af"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tâche",
+			"item": [
+				{
+					"name": "add-task",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"task number 1\",\r\n    \"date_debut\" :\"2012-03-21T18:25:43-05:00\",\r\n    \"date_fin\" :\"2013-03-21T18:25:43-05:00\" ,\r\n    \"etat\":\"terminé\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/taches/add-tache",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"taches",
+								"add-tache"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-one-task",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/taches/60d9cb79704cb53c8cc31147",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"taches",
+								"60d9cb79704cb53c8cc31147"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-all-tasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/taches/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"taches",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-task",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"task number 63\",\r\n    \"date_debut\" :\"2012-03-21T18:25:43-05:00\",\r\n    \"date_fin\" :\"2013-03-21T18:25:43-05:00\" ,\r\n    \"etat\":\"en cours\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/taches/update/60d9cb79704cb53c8cc31147",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"taches",
+								"update",
+								"60d9cb79704cb53c8cc31147"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-one-task",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/taches/60d9cb74704cb53c8cc31145",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"taches",
+								"60d9cb74704cb53c8cc31145"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-all-tasks",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/taches/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"taches",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "équipe",
+			"item": [
+				{
+					"name": "add-equipe",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nom\":\"equipe B\",\r\n    \"nb_membre\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/equipes/add-equipe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"equipes",
+								"add-equipe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/equipes/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"equipes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/equipes/60d99943a51dc51bc472e39d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"equipes",
+								"60d99943a51dc51bc472e39d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nom\":\"equipe Z\",\r\n    \"nb_membre\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/equipes/update/60d99943a51dc51bc472e39d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"equipes",
+								"update",
+								"60d99943a51dc51bc472e39d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-all",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/equipes/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"equipes",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "contrat",
+			"item": [
+				{
+					"name": "add-contrat",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{     \"NomContrat\" : \"hey\",\r\n      \"Datedebut\"  : \"2012-04-21T18:25:43-05:00\",\r\n      \"Datefin\"    : \"2012-03-21T18:25:43-05:00\",\r\n      \"Type\"       : \"CDD\"\r\n \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/Contrat/add-contrat",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"Contrat",
+								"add-contrat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all contrats",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/Contrat/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"Contrat",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get contrat by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/Contrat/60d9a43f179df31f683a7fdd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"Contrat",
+								"60d9a43f179df31f683a7fdd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update contrat",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{     \"NomContrat\" : \"sar\",\r\n      \"Datedebut\"  : \"2012-04-21T18:25:43-05:00\",\r\n      \"Datefin\"    : \"2012-03-21T18:25:43-05:00\",\r\n      \"Type\"       : \"CDD\"\r\n \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/Contrat/update/60d996090ce1f4499c4e5aa6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"Contrat",
+								"update",
+								"60d996090ce1f4499c4e5aa6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete contrat",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/Contrat/60d9a78e179df31f683a7fec",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"Contrat",
+								"60d9a78e179df31f683a7fec"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete AllContrats",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/Contrat/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"Contrat",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "dossier",
+			"item": [
+				{
+					"name": "add-dossier",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{     \"Cv\" : \"hey\",\r\n      \"Autre\"  : \"gge\",\r\n      \"Description\": \"hhh\"\r\n  \r\n \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/Dossier/add-dossier",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"Dossier",
+								"add-dossier"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all dossiers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/Dossier/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"Dossier",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get dossier by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/Dossier/60d9a78b179df31f683a7fe8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"Dossier",
+								"60d9a78b179df31f683a7fe8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update dossier",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{     \"Cv\" : \"saraa\",\r\n      \"Autre\"  : \"gge\",\r\n      \"Description\": \"hhh\"\r\n  \r\n \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/Dossier/update/60d9a499179df31f683a7fdf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"Dossier",
+								"update",
+								"60d9a499179df31f683a7fdf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete dossier",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/Dossier/60d9c6af112b892d58a75999",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"Dossier",
+								"60d9c6af112b892d58a75999"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete AllDossiers",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/Dossier/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"Dossier",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

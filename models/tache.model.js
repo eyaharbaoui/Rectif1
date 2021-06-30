@@ -11,7 +11,9 @@ let Tache = new Schema({
     date_fin: {
         type: Date
     },
-
+    nom: {
+        type: String
+    },
     etat: {
         type: String,
         enum: ['en cours', 'terminé', 'annulé', 'deadline dépasseé', 'terminé après deadline'],

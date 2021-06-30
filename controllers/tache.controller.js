@@ -14,7 +14,9 @@ exports.create = (req, res) => {
        description: req.body.description,
         date_debut: req.body.date_debut,
         date_fin: req.body.date_fin,
-        etat:req.body.etat
+        etat:req.body.etat,
+        nom: req.body.nom
+
 
 
     });

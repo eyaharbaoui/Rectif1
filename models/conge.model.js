@@ -21,6 +21,10 @@ let Conge = new Schema({
         enum: ['En attente', 'Approuvé', 'Non approuvé'],
         default: 'Approuvé'
     },
+    paiement:{
+        type: Number,
+        default: 0
+    }
 
 
 }, {

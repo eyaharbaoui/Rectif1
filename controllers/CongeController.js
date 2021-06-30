@@ -16,7 +16,8 @@ exports.create = (req, res) => {
         nb_heure: req.body.nb_heure,
         date_d: req.body.date_d,
         date_f: req.body.date_f,
-        justificatif: req.body.justificatif
+        justificatif: req.body.justificatif,
+        paiement: req.body.paiement
 
         //   etat : req.body.etat
 

@@ -1,6 +1,14 @@
-node_modules
+/node_modules
 build
 npm-debug.log
 .env
 .DS_Store
 package-lock.json
+
+/frontend erprh/node_modules
+
+# compiled output  
+
+/frontend erprh/dist  
+/frontend erprh/tmp  
+/frontend erprh/out-tsc  

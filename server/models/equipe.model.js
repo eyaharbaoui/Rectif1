@@ -5,6 +5,9 @@ let Equipe = new Schema({
     nom: {
         type: String
     },
+    chef_equipe:{
+        type: String
+    },
     nb_membre: {
         type: Number
     },

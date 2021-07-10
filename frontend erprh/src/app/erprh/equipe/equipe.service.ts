@@ -17,7 +17,6 @@ export class EquipeService {
     this.http.get('http://localhost:8000/equipes/').subscribe( 
       (data : any)=> {
        
-      //console.log(Object.keys(data).length);
       for (let i = 0 ; i <(Object.keys(data).length) ;i++) {
         let e = new Equipe(
           data[i].nom,

@@ -10,7 +10,9 @@ export class EquipeService {
   private equipes: Equipe[]=[];
   private equipesUpdated = new Subject<Equipe[]>();
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    this.getEquipes();
+  }
 
   getEquipes(){
     
@@ -35,7 +37,6 @@ export class EquipeService {
   }
   fetchEquipes() {
     console.log(this.equipes);
-    
     return this.equipes;
   }
   
@@ -54,5 +55,6 @@ export class EquipeService {
       });
 
   }
+  
 
 }

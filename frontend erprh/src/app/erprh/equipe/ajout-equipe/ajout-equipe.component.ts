@@ -41,7 +41,7 @@ ngOnInit() {
 
      console.log(e);
     this.equipeService.addEquipe(e);
-    
+    form.reset();
     //console.log(this.equipeService.getEquipes());
     this.router.navigate(['/admin/liste'])
   }

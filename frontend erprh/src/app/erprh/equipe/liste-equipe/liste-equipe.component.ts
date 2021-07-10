@@ -18,7 +18,6 @@ import {EquipeService} from "../equipe.service";
   private equipesSub? : Subscription;
 
   constructor(private equipeService: EquipeService) {
-    this.equipeService.getEquipes();
   }
 
   ngOnInit() {

@@ -13,28 +13,33 @@ export class EquipeService {
   constructor(private http: HttpClient) {}
 
   getEquipes(){
-    this.http.get<{[key :string ] : Equipe }>('http://localhost:8000/api/equipes')
-      .pipe(map((responseData) => {
-        const equipes : Equipe[]= [];
-        for (const key in responseData ) {
-          if (responseData.hasOwnProperty(key)) {
-            equipes.push(responseData[key]);
-          }
+    
+    this.http.get('http://localhost:8000/equipes/').subscribe( 
+      (data : any)=> {
+       
+      //console.log(Object.keys(data).length);
+      for (let i = 0 ; i <(Object.keys(data).length) ;i++) {
+        let e = new Equipe(
+          data[i].nom,
+          data[i].chef_equipe,
+          data[i].nb_membre,
+        )
+        console.log(e);
+        
+        this.equipes.push(e);
+      }
+      console.log(this.equipes);
+          
         }
-        return equipes
-    })
-      )
-      .subscribe((equipes) => {
-        this.setEquipes(equipes)
-      });
+      
+    );    
   }
   fetchEquipes() {
+    console.log(this.equipes);
+    
     return this.equipes;
   }
-  setEquipes(e : Equipe[]){
-    this.equipes = e;
-
-  }
+  
 
   getEquipeUpdateListener(){
     return this.equipesUpdated.asObservable();
@@ -42,7 +47,7 @@ export class EquipeService {
 
   addEquipe(equipe :Equipe){
     this.http
-      .post<{message:string}>('http://localhost:8000/api/equipes', equipe)
+      .post<{message:string}>('http://localhost:8000/equipes/add-equipe', equipe)
       .subscribe((responseData)=>{
         console.log(responseData.message);
         this.equipes.push(equipe);

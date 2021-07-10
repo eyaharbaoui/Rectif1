@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Equipe} from "../equipe.model";
 import {EquipeService} from "../equipe.service";
 import {Router} from "@angular/router";
-import {FormControl, FormGroup, NgForm, Validators} from "@angular/forms";
+import {NgForm} from "@angular/forms";
 
 
 
@@ -13,33 +13,36 @@ import {FormControl, FormGroup, NgForm, Validators} from "@angular/forms";
   styleUrls: ['./ajout-equipe.component.css']
 })
 export class AjoutEquipeComponent implements OnInit{
-  id ='';
-  nom = '';
-  chef_equipe = '';
-  nb_membre = 0;
+  id : string = ""
+  nom :string = '';
+  chef_equipe : string = '';
+  nb_membre : number = 0;
+  
 
 
-
-  constructor(private  equipeService: EquipeService, private router : Router) {;
+  constructor(
+    private equipeService: EquipeService,
+    private router : Router) {;
   }
 ngOnInit() {
-
+  
 }
-
+  
   onAddEquipe(form : NgForm) {
-    console.log(form.value);
+    const f = form;
+    console.log(f);
+    
 
-    const equipe = new Equipe (
-      form?.value.id,
-      form?.value.nom,
-      form?.value.chef_equipe,
-      form?.value.nb_membre
+    const e = new Equipe (
+      form.value.nom,
+      form.value.chefEquipe,
+      form.value.nbMembre
   );
 
-     console.log(equipe);
-    this.equipeService.addEquipe(equipe);
-    form?.reset();
-    console.log(this.equipeService.getEquipes());
+     console.log(e);
+    this.equipeService.addEquipe(e);
+    
+    //console.log(this.equipeService.getEquipes());
     this.router.navigate(['/admin/liste'])
   }
 }

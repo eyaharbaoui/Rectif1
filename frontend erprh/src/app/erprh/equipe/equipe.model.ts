@@ -1,9 +1,10 @@
 export class Equipe {
+
+ 
   constructor(
-    public id: string,
-    public nom : String,
-    public chef_equipe: String,
-    public nb_membre: number) {
+    public nom : string ='',
+    public chef_equipe: string ='',
+    public nb_membre: number = 0) {
   }
 }
 

@@ -25,16 +25,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 // parse postman of content-type - application/json
 app.use(bodyParser.json());
 
-//database connexion
-mongoose.connect('mongodb://localhost:27017/erpRh', {
-    useFindAndModify: false,
-    useCreateIndex: true,
-    useUnifiedTopology: true,
-    useNewUrlParser: true
-})
-    .then((data) => console.log("database connected"))
-
-
 
 //models
 require("./models/user.model");
@@ -57,30 +47,6 @@ app.use((req, res, next)=>{
     next();
 });
 
-app.post("/api/equipes",(req, res, next )=>{
-    const equipe = new Equipe({
-        nom: req.body.nom,
-        chef_equipe: req.body.chef_equipe,
-        nb_membre: req.body.nb_membre
-    });
-
-    // console.log(equipe);
-    res.status(201).json({
-        message: "equipe ajoutée"
-    });
-});
-
-app.get('/api/equipes',(req, res, next)=>{
-    const equipes =[
-        // {id:'xcv463', nom:'eya', chef_equipe:'eyaa', nb_membre: 5},
-        // {id:'uyjnhbg41', nom:'med', chef_equipe:'medd', nb_membre: 4}
-
-    ];
-    res.status(200).json({
-        message:'Equipe trouvée ',
-        equipes:equipes
-    });
-});
 
 //router
 let userRouter = require('./routes/users');

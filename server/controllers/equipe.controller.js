@@ -12,6 +12,7 @@ exports.create = (req, res) => {
     // Create equipe
     const equipe = new Equipe({
         nom: req.body.nom,
+        chef_equipe : req.body.chef_equipe,
         nb_membre: req.body.nb_membre
 
     });

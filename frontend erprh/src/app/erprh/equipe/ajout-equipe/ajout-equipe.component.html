@@ -23,19 +23,40 @@
         </div>
         <!-- /.card-header -->
         <!-- form start -->
-        <form #f ="ngForm" (ngSubmit)="onAddEquipe(f)" >
+        <form  #f="ngForm" >
           <div class="card-body">
             <div class="form-group">
-              <label for="exampleInputNom">Nom</label>
-              <input ngModel required  [ngModelOptions]="{standalone: true}" type="string" class="form-control" id="exampleInputNom" placeholder="Entrer le nom de l'équipe" >
+              <label for="nom">Nom</label>
+              <input 
+                ngModel 
+                required  
+                type="string" 
+                class="form-control" 
+                id="nom"
+                name="nom" 
+                placeholder="Entrer le nom de l'équipe" >
             </div>
             <div class="form-group">
-              <label for="exampleInputChef">Chef de l'équipe</label>
-              <input ngModel required [ngModelOptions]="{standalone: true}" type="string" class="form-control" id="exampleInputChef" placeholder="Entrer le nom du chef">
+              <label for="chefEquipe">Chef de l'équipe</label>
+              <input 
+                ngModel 
+                required 
+                type="string" 
+                class="form-control" 
+                id="chefEquipe" 
+                name="chefEquipe"
+                placeholder="Entrer le nom du chef">
             </div>
             <div class="form-group">
-              <label  for="exampleInputNumber">Nombre de personnes</label>
-              <input ngModel required [ngModelOptions]="{standalone: true}" type="Number" class="form-control" id="exampleInputNumber" placeholder="Entrer le nombre de personnes">
+              <label  for="nbMembre">Nombre de personnes</label>
+              <input 
+                ngModel 
+                required 
+                type="Number" 
+                class="form-control" 
+                id="nbMembre"
+                name="nbMembre" 
+                placeholder="Entrer le nombre de personnes">
             </div>
 
 
@@ -44,7 +65,7 @@
           <!-- /.card-body -->
 
           <div class="card-footer">
-            <button type="submit" [disabled]=" !f.valid" class="btn btn-primary">Submit</button>
+            <button (click)="onAddEquipe(f)" class="btn btn-primary">Submit</button>
           </div>
         </form>
       </div>

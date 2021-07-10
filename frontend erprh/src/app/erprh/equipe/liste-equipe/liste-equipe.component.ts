@@ -18,12 +18,11 @@ import {EquipeService} from "../equipe.service";
   private equipesSub? : Subscription;
 
   constructor(private equipeService: EquipeService) {
-
+    this.equipeService.getEquipes();
   }
 
   ngOnInit() {
-    console.log(this.equipeService.fetchEquipes());
-
+     this.equipes = this.equipeService.fetchEquipes();
   }
   ngOnDestroy(){
     this.equipesSub?.unsubscribe();

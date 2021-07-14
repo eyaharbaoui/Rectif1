@@ -19,7 +19,10 @@ exports.create = (req, res) => {
     // Save equipe in the database
     equipe.save(equipe)
         .then(data => {
-            res.send(data);
+            res.send({
+                message: "Post added successfully",
+                equipeId: data._id
+            });
         })
         .catch(err => {
             res.status(500).send({

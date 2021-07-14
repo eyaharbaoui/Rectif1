@@ -21,8 +21,20 @@ import {EquipeService} from "../equipe.service";
   }
 
   ngOnInit() {
-     this.equipes = this.equipeService.fetchEquipes();
+    this.equipes = this.equipeService.fetchEquipes();
+    //this.equipes = this.equipeService.getEquipes();
+    this.equipesSub = this.equipeService.getEquipeUpdateListener()
+      .subscribe((equipes: Equipe[]) => {
+        this.equipes = equipes;
+      });
   }
+
+
+  onDelete(id: string | undefined){
+    console.log(id);
+    this.equipeService.deleteEquipe(id);
+  }
+
   ngOnDestroy(){
     this.equipesSub?.unsubscribe();
   }

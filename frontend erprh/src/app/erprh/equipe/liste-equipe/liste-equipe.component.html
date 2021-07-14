@@ -43,16 +43,19 @@
     </thead>
 
 
-    <div multi='true'>
     <tr class="odd0 " *ngFor= 'let equipe of equipes'>
-      <div >
+
       <td class="dtr-control sorting_1" tabindex="0">{{equipe.nom}}</td>
       <td>{{equipe.chef_equipe}}</td>
       <td>{{equipe.nb_membre}}</td>
-      <td>1.7</td>
-      <td style="display: none;">A</td>
-      </div>
-    </div>
+      <td >
+
+<!--      <a [routerLink]="['/admin/update',equipe.id]" >Modifier</a>-->
+        <i class="fas fa-edit" [routerLink]="['/admin/update',equipe.id]" ></i>
+
+        <i class="fas fa-trash-alt" (click)="onDelete(equipe.id)" ></i>
+<!--      <button (click)="onDelete(equipe.id)" type="button" class="btn btn-block btn-success">Supprimer</button>-->
+      </td>
         <p *ngIf='equipes.length <=0'>No posts added yet!</p>
       </table>
   </div>

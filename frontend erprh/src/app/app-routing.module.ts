@@ -7,7 +7,8 @@ import {ListeEquipeComponent} from "./erprh/equipe/liste-equipe/liste-equipe.com
 const routes: Routes = [
   {path: 'admin', component: AdminComponent, children:[
       {path: 'ajout', component: AjoutEquipeComponent},
-      {path : 'liste', component: ListeEquipeComponent}
+      {path : 'liste', component: ListeEquipeComponent},
+      {path : 'update/:equipeId', component: AjoutEquipeComponent}
     ]},
 
 ];
